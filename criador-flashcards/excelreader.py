@@ -1,7 +1,7 @@
 import pandas as pd
 
 # Ler o arquivo XLS
-file_path = "C:\\Users\\aaron\\Desktop\\arquivoanki.xlsx"
+file_path = r'caminho_do_arquivo'
 data = pd.read_excel(file_path)
 
 # Colunas do excel
