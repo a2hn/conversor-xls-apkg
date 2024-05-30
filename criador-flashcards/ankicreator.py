@@ -1,7 +1,7 @@
 from excelreader import create_flashcards
 import genanki
 
-nomearq = 'pm.apkg'
+file = 'nome_dos_flashcard.apkg'
 
 # Criar o modelo do Anki
 model_id = 1607392319
@@ -34,4 +34,4 @@ for front, back in create_flashcards():
     deck.add_note(note)
 
 # Salvar o arquivo do Anki
-genanki.Package(deck).write_to_file(nomearq)
+genanki.Package(deck).write_to_file(file)

@@ -4,16 +4,16 @@ import pandas as pd
 file_path = "C:\\Users\\aaron\\Desktop\\arquivoanki.xlsx"
 data = pd.read_excel(file_path)
 
-# Declaração
-coluna1 = 'PERGUNTA'
-coluna2 = 'RESPOSTA'
+# Colunas do excel
+q_column = 'PERGUNTA'
+a_column = 'RESPOSTA'
 
 # Função para criar os flashcards em uma lista
 def create_flashcards():
     flashcards = []
     for index, row in data.iterrows():
-        pergunta = row[coluna1]
-        resposta = row[coluna2]
+        pergunta = row[q_column]
+        resposta = row[a_column]
         
         front = f"{pergunta if pd.notna(pergunta) else ''}"
         back = f"{resposta if pd.notna(resposta) else ''}"
